@@ -114,9 +114,9 @@ Take the code from the combinations and wrap it in the count function
  (for [tumbler-1 (range 10)
       tumbler-2 (range 10)
       tumbler-3 (range 10)
-      :when (or (= tumbler-1 tumbler-2)
-                (= tumbler-2 tumbler-3)
-                (= tumbler-3 tumbler-1))]
+      :when (not (or (= tumbler-1 tumbler-2)
+                     (= tumbler-2 tumbler-3)
+                     (= tumbler-3 tumbler-1)))]
   [tumbler-1 tumbler-2 tumbler-3]))
 ~~~
 
